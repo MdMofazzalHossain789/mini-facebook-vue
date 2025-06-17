@@ -1,14 +1,18 @@
-<script setup></script>
+<script setup>
+import { format } from "timeago.js";
+
+defineProps(["author", "avatar", "createdAt"]);
+</script>
 
 <template>
   <div class="p-4 flex items-center justify-between">
     <div class="flex items-center gap-x-4">
-      <div class="w-14 h-14 rounded-full bg-gray-300"></div>
+      <NuxtImg :src="avatar" class="w-14 h-14 rounded-full bg-gray-300" />
       <div class="flex flex-col">
         <NuxtLink class="hover:underline" to="/">
-          <h1 class="font-semibold">Md Mofazzal Hossain</h1>
+          <h1 class="font-semibold">{{ author }}</h1>
         </NuxtLink>
-        <p class="text-sm opacity-75">12 May 2025</p>
+        <p class="text-sm opacity-75">{{ format(createdAt) }}</p>
       </div>
     </div>
     <div class="icon-button">

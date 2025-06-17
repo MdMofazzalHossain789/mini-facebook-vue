@@ -1,7 +1,9 @@
 <script setup>
-const comments = ref(0);
-const likes = ref(1);
-const shares = ref(0);
+const props = defineProps(["likesCount", "commentsCount", "sharesCount"]);
+
+const comments = ref(props.commentsCount);
+const likes = ref(props.likesCount);
+const shares = ref(props.sharesCount);
 const liked = ref(false);
 const canComment = ref(false);
 const commentEl = ref(null);
@@ -50,7 +52,6 @@ function handleLike() {
 }
 
 function handleSubmitComment() {
-  alert(comment.value);
   comment.value = "";
   canComment.value = false;
   comments.value += 1;
