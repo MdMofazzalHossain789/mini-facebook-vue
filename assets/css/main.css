@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+.button {
+  @apply flex items-center justify-center w-full p-2 rounded-md gap-x-2 hover:bg-black/5 cursor-pointer transition;
+}
+
+.icon-button {
+  @apply flex items-center justify-center w-fit p-2 rounded-full gap-x-2 hover:bg-black/5 cursor-pointer transition;
+}
+
+.link {
+  @apply hover:underline;
+}
