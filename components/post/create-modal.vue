@@ -17,7 +17,7 @@ const handleSubmitPost = () => {
   const likes = Math.floor(Math.random() * 50) + 1;
   const comments = Math.floor(Math.random() * 20) + 1;
   const shares = Math.floor(Math.random() * 10) + 1;
-  const id = crypto.randomUUID();
+  const id = new Date().getTime();
 
   posts.value.unshift({
     id,
@@ -36,7 +36,10 @@ const handleSubmitPost = () => {
 </script>
 
 <template>
-  <div class="p-4 card w-full max-w-[600px] flex flex-col gap-y-4" @click.stop>
+  <div
+    class="relative z-20 p-4 card w-full max-w-[600px] flex flex-col gap-y-4"
+    @click.stop
+  >
     <h1 class="text-center font-semibold text-xl opacity-50">Create A Post</h1>
     <div class="h-[1px] w-full bg-black/10"></div>
     <form

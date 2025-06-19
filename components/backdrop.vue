@@ -4,8 +4,8 @@ const props = defineProps(["handleToggleModal"]);
 
 <template>
   <div
-    class="fixed top-0 left-0 w-screen h-screen bg-black/20 z-1 flex items-center justify-center"
-    @click="handleToggleModal"
+    class="fixed top-0 left-0 w-screen h-screen bg-black/20 flex items-center justify-center overflow-hidden z-50"
+    @click.self="handleToggleModal"
   >
     <slot></slot>
   </div>

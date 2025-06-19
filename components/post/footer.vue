@@ -63,8 +63,11 @@ function handleSubmitComment() {
 </script>
 
 <template>
-  <div class="px-4 pt-4 pb-2 flex flex-col gap-y-2">
-    <p v-if="showInteraction" class="flex items-center gap-x-1 opacity-70">
+  <div class="px-2 pt-2 pb-1 flex flex-col gap-y-2">
+    <p
+      v-if="showInteraction"
+      class="flex items-center gap-x-1 opacity-70 text-xs"
+    >
       {{ showInteraction }}
     </p>
     <div v-if="showCommentInput">
@@ -72,17 +75,15 @@ function handleSubmitComment() {
         class="fixed top-0 left-0 h-screen w-screen z-0"
         @click="showCommentInput = !showCommentInput"
       ></div>
-      <div class="relative z-10 flex items-center gap-x-4 w-full">
-        <div>
-          <NuxtImg
-            :src="`https://i.pravatar.cc/150?img=${Math.floor(
-              Math.random() * 50 + 1
-            )}`"
-            class="w-12 h-12 rounded-full bg-gray-300"
-          ></NuxtImg>
-        </div>
+      <div class="relative z-10 flex items-center gap-x-2 w-full py-1">
+        <NuxtImg
+          :src="`https://i.pravatar.cc/150?img=${Math.floor(
+            Math.random() * 50 + 1
+          )}`"
+          class="w-10 h-10 rounded-full bg-gray-300"
+        ></NuxtImg>
         <form
-          class="flex items-center gap-x-4 w-full"
+          class="flex items-center gap-x-2 w-full"
           @submit.prevent="handleSubmitComment"
         >
           <input
@@ -90,7 +91,7 @@ function handleSubmitComment() {
             v-model="comment"
             type="text"
             placeholder="Type your comment..."
-            class="w-full bg-black/5 px-4 py-3 rounded-full border-[1px] border-black/20"
+            class="w-full bg-black/5 px-3 py-2 rounded-full border-[1px] border-black/20"
             :class="{
               'outline-blue-500 border-blue-500 ring-blue-500':
                 !canSubmitComment,
@@ -102,13 +103,13 @@ function handleSubmitComment() {
           >
             <Icon
               icon="material-symbols-light:send-outline-rounded"
-              class="w-8 h-8"
+              class="w-6 h-6"
             />
           </button>
         </form>
       </div>
     </div>
-    <div v-else class="flex items-center gap-x-4 justify-between">
+    <div v-else class="flex items-center gap-x-1 justify-between text-sm">
       <button
         @click="handleLike"
         :class="{
@@ -122,7 +123,7 @@ function handleSubmitComment() {
               ? 'material-symbols-light:thumb-up-rounded'
               : 'material-symbols-light:thumb-up-outline'
           "
-          class="w-8 h-8"
+          class="w-6 h-6"
         />
 
         {{ liked ? "Liked" : "Like" }}
@@ -130,13 +131,13 @@ function handleSubmitComment() {
       <button class="button" @click="showCommentInput = !showCommentInput">
         <Icon
           icon="material-symbols-light:comment-outline-rounded"
-          class="w-8 h-8"
+          class="w-6 h-6"
         />
 
         Comment
       </button>
       <button class="button">
-        <Icon icon="material-symbols-light:share-outline" class="w-8 h-8" />
+        <Icon icon="material-symbols-light:share-outline" class="w-6 h-6" />
 
         Share
       </button>
