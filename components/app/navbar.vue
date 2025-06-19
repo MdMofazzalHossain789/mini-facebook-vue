@@ -12,11 +12,14 @@ import Search from "./search.vue";
         <NuxtLink to="/" class="text-xl font-bold">mini facebook</NuxtLink>
       </li>
     </ul>
-    <ul class="flex items-center gap-x-4 px-4">
+    <ul class="flex items-center gap-x-2 px-4">
       <Search />
       <li><NuxtLink to="/profile">Profile</NuxtLink></li>
       <li>
-        <Icon icon="material-symbols-light:logout-rounded" class="w-12 h-12" />
+        <Icon
+          icon="material-symbols-light:logout-rounded"
+          class="w-10 h-10 icon-button text-red-500"
+        />
       </li>
     </ul>
   </nav>
