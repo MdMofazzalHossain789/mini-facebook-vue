@@ -3,7 +3,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   compatibilityDate: "2025-05-15",
   devtools: { enabled: true },
-  modules: ["@nuxt/image"],
+  modules: ["@nuxt/image", "@nuxt/icon"],
   image: {
     domains: ["i.pravatar.cc"], // allow remote domain
   },

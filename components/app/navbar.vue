@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import Search from "./search.vue";
+</script>
+
 <template>
   <nav
     class="flex items-center gap-x-4 justify-between p-4 mx-auto max-w-[1200px]"
@@ -8,7 +12,7 @@
       </li>
     </ul>
     <ul class="flex items-center gap-x-4 px-4">
-      <li><NuxtLink to="/search">Search</NuxtLink></li>
+      <Search />
       <li><NuxtLink to="/profile">Profile</NuxtLink></li>
       <li><button href="#">Logout</button></li>
     </ul>

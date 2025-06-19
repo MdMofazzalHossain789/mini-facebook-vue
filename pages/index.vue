@@ -3,7 +3,7 @@ import { ref, provide } from "vue";
 
 const posts = ref([
   {
-    id: crypto.randomUUID(),
+    id: 1,
     createdAt: new Date(Date.now() - 1000 * 60 * 60 * 1), // 1 hour ago
     author: "Md Mofazzal Hossain",
     avatar: "https://i.pravatar.cc/150?img=1",
@@ -14,7 +14,7 @@ const posts = ref([
     shares: 4,
   },
   {
-    id: crypto.randomUUID(),
+    id: 2,
     createdAt: new Date(Date.now() - 1000 * 60 * 60 * 3), // 3 hours ago
     author: "Sadia Anjum",
     avatar: "https://i.pravatar.cc/150?img=2",
@@ -25,7 +25,7 @@ const posts = ref([
     shares: 10,
   },
   {
-    id: crypto.randomUUID(),
+    id: 3,
     createdAt: new Date(Date.now() - 1000 * 60 * 60 * 24), // 1 day ago
     author: "Rafiul Hasan",
     avatar: "https://i.pravatar.cc/150?img=3",
@@ -36,7 +36,7 @@ const posts = ref([
     shares: 2,
   },
   {
-    id: crypto.randomUUID(),
+    id: 4,
     createdAt: new Date(Date.now() - 1000 * 60 * 60 * 48), // 2 days ago
     author: "Ayesha Noor",
     avatar: "https://i.pravatar.cc/150?img=4",
@@ -47,7 +47,7 @@ const posts = ref([
     shares: 1,
   },
   {
-    id: crypto.randomUUID(),
+    id: 5,
     createdAt: new Date(Date.now() - 1000 * 60 * 60 * 72), // 3 days ago
     author: "Jamal Uddin",
     avatar: "https://i.pravatar.cc/150?img=5",
@@ -58,7 +58,7 @@ const posts = ref([
     shares: 15,
   },
   {
-    id: crypto.randomUUID(),
+    id: 6,
     createdAt: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago
     author: "Rumana Aktar",
     avatar: "https://i.pravatar.cc/150?img=6",
@@ -69,7 +69,7 @@ const posts = ref([
     shares: 3,
   },
   {
-    id: crypto.randomUUID(),
+    id: 7,
     createdAt: new Date(Date.now() - 1000 * 60 * 60 * 6), // 6 hours ago
     author: "Nahid Islam",
     avatar: "https://i.pravatar.cc/150?img=7",
@@ -80,7 +80,7 @@ const posts = ref([
     shares: 6,
   },
   {
-    id: crypto.randomUUID(),
+    id: 8,
     createdAt: new Date(Date.now() - 1000 * 60 * 60 * 10), // 10 hours ago
     author: "Fatema Begum",
     avatar: "https://i.pravatar.cc/150?img=8",
@@ -91,7 +91,7 @@ const posts = ref([
     shares: 1,
   },
   {
-    id: crypto.randomUUID(),
+    id: 9,
     createdAt: new Date(Date.now() - 1000 * 60 * 60 * 168), // 7 days ago
     author: "Shakil Khan",
     avatar: "https://i.pravatar.cc/150?img=9",
@@ -102,7 +102,7 @@ const posts = ref([
     shares: 12,
   },
   {
-    id: crypto.randomUUID(),
+    id: 10,
     createdAt: new Date(Date.now() - 1000 * 60 * 60 * 2), // 2 hours ago
     author: "Nadia Sultana",
     avatar: "https://i.pravatar.cc/150?img=10",

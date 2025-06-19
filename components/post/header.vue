@@ -6,8 +6,8 @@ defineProps(["author", "avatar", "createdAt"]);
 
 <template>
   <div class="p-4 flex items-center justify-between">
-    <div class="flex items-center gap-x-4">
-      <NuxtImg :src="avatar" class="w-14 h-14 rounded-full bg-gray-300" />
+    <div class="flex items-center gap-x-2">
+      <NuxtImg :src="avatar" class="w-10 h-10 rounded-full bg-gray-300" />
       <div class="flex flex-col">
         <NuxtLink class="hover:underline" to="/">
           <h1 class="font-semibold">{{ author }}</h1>
