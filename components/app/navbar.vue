@@ -13,13 +13,16 @@ import Search from "./search.vue";
       </li>
     </ul>
     <ul class="flex items-center gap-x-2 px-4">
-      <Search />
+      <NuxtLink to="/search">
+        <Search />
+      </NuxtLink>
       <li><NuxtLink to="/profile">Profile</NuxtLink></li>
       <li>
-        <Icon
-          icon="material-symbols-light:logout-rounded"
-          class="w-10 h-10 icon-button text-red-500"
-        />
+        <NuxtLink to="/login">
+          <Icon
+            icon="material-symbols-light:logout-rounded"
+            class="w-10 h-10 icon-button text-red-500 bg-transparent !!hover:bg-red-500/20"
+        /></NuxtLink>
       </li>
     </ul>
   </nav>

@@ -1,3 +1,9 @@
+<script setup>
+const user = ref(null);
+
+provide("user", user);
+</script>
+
 <template>
   <div class="w-screen h-screen">
     <div class="border-b-[1px] border-black/20 shadow-md">
