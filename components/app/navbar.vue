@@ -8,12 +8,21 @@ import { Icon } from "@iconify/vue";
   >
     <ul>
       <li>
-        <NuxtLink to="/" class="text-xl font-bold">mini facebook</NuxtLink>
+        <NuxtLink to="/" class="text-xl relative text-blue-500 font-extrabold"
+          >Facebook
+          <span class="text-xs absolute -right-7 text-amber-600 font-normal"
+            >mini</span
+          ></NuxtLink
+        >
       </li>
     </ul>
     <ul class="flex items-center gap-x-2 px-4">
       <AppSearch />
-      <li><NuxtLink to="/profile">Profile</NuxtLink></li>
+      <li>
+        <NuxtLink to="/profile" class="icon-button p-1">
+          <div class="w-8 h-8 rounded-full bg-gray-500"></div>
+        </NuxtLink>
+      </li>
       <li>
         <NuxtLink to="/login">
           <Icon

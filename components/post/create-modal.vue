@@ -37,7 +37,7 @@ const handleSubmitPost = () => {
 
 <template>
   <div
-    class="relative z-20 p-4 card w-full max-w-[600px] flex flex-col gap-y-4"
+    class="relative z-20 p-4 card w-[92%] max-w-[600px] flex flex-col gap-y-4"
     @click.stop
   >
     <h1 class="text-center font-semibold text-xl opacity-50">Create A Post</h1>

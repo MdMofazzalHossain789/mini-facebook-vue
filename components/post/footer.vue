@@ -9,6 +9,7 @@ const liked = ref(false);
 const showCommentInput = ref(false);
 const commentEl = ref(null);
 const comment = ref("");
+const toggleShowShareModal = ref(false);
 const canSubmitComment = computed(() => {
   return comment.value === "";
 });
@@ -23,6 +24,10 @@ watch(showCommentInput, async (newValue) => {
     commentEl.value?.focus();
   }
 });
+
+const handleToggleShowShareModal = () => {
+  toggleShowShareModal.value = !toggleShowShareModal.value;
+};
 
 const showInteraction = computed(() => {
   const parts = [];
@@ -136,11 +141,17 @@ function handleSubmitComment() {
 
         Comment
       </button>
-      <button class="button">
-        <Icon icon="material-symbols-light:share-outline" class="w-6 h-6" />
+      <div class="relative">
+        <div class="button" @click="handleToggleShowShareModal">
+          <Icon icon="material-symbols-light:share-outline" class="w-6 h-6" />
 
-        Share
-      </button>
+          Share
+        </div>
+        <PostShareModal
+          v-if="toggleShowShareModal"
+          :handleToggleShareModal="handleToggleShowShareModal"
+        />
+      </div>
     </div>
   </div>
 </template>

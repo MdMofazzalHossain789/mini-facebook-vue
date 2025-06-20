@@ -19,7 +19,7 @@ const handleToggleShowSearch = () => {
     </div>
     <div v-else>
       <div class="" @click.stop="">
-        <AppSearchInput />
+        <AppSearchInput :handleToggleShowSearch />
       </div>
       <div
         class="fixed z-20 left-0 top-0 h-full w-full"
