@@ -16,7 +16,7 @@ const handleSubmit = () => {
 
 <template>
   <div class="w-screen h-screen flex items-center justify-center">
-    <div class="card p-4 w-full max-w-[50%]">
+    <div class="card p-4 w-[80%] max-w-[500px]">
       <div class="py-4">
         <h1 class="text-xl font-semibold text-center">Log In</h1>
         <p class="text-xs text-center opacity-70">
@@ -41,11 +41,12 @@ const handleSubmit = () => {
               v-model="password"
             />
           </label>
-          <button
-            class="btn-primary px-4 py-2 rounded-md text-white font-semibold"
+          <NuxtLink
+            to="/"
+            class="btn-primary px-4 py-2 rounded-md text-white font-semibold text-center"
           >
             Log In
-          </button>
+          </NuxtLink>
           <p class="text-xs opacity-70 text-center">
             You can log in with dummy username and password
           </p>

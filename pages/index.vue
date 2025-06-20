@@ -118,5 +118,7 @@ provide("posts", posts);
 </script>
 
 <template>
-  <PostList />
+  <div class="">
+    <PostList />
+  </div>
 </template>

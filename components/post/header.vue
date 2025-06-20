@@ -1,7 +1,14 @@
 <script setup>
+import { Icon } from "@iconify/vue";
 import { format } from "timeago.js";
 
 defineProps(["author", "avatar", "createdAt"]);
+
+const toggleShowOptions = ref(false);
+
+const handleToggleShowOptions = () => {
+  toggleShowOptions.value = !toggleShowOptions.value;
+};
 </script>
 
 <template>
@@ -15,21 +22,14 @@ defineProps(["author", "avatar", "createdAt"]);
         <p class="text-sm opacity-75">{{ format(createdAt) }}</p>
       </div>
     </div>
-    <div class="icon-button">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        class="size-6"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
-        />
-      </svg>
+    <div class="relative">
+      <div class="icon-button relaitve" @click="handleToggleShowOptions">
+        <Icon icon="material-symbols-light:more-horiz" class="w-8 h-8" />
+      </div>
+      <PostOptions
+        v-if="toggleShowOptions"
+        :handleToggleShowOptions="handleToggleShowOptions"
+      />
     </div>
   </div>
 </template>

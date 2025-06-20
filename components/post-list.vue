@@ -3,7 +3,7 @@ const posts = inject("posts");
 </script>
 
 <template>
-  <div class="h-full w-full overflow-y-auto pt-2">
+  <div class="pt-2">
     <div class="px-4">
       <PostCreate />
     </div>

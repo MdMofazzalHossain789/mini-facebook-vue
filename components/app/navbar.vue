@@ -1,11 +1,10 @@
 <script setup lang="ts">
 import { Icon } from "@iconify/vue";
-import Search from "./search.vue";
 </script>
 
 <template>
   <nav
-    class="flex items-center gap-x-4 justify-between p-4 mx-auto max-w-[1200px]"
+    class="relative flex items-center gap-x-4 justify-between p-4 mx-auto max-w-[1200px]"
   >
     <ul>
       <li>
@@ -13,9 +12,7 @@ import Search from "./search.vue";
       </li>
     </ul>
     <ul class="flex items-center gap-x-2 px-4">
-      <NuxtLink to="/search">
-        <Search />
-      </NuxtLink>
+      <AppSearch />
       <li><NuxtLink to="/profile">Profile</NuxtLink></li>
       <li>
         <NuxtLink to="/login">
